@@ -8,7 +8,7 @@ class Point {
         const rad = size/2;
         ctx.beginPath();
         ctx.fillStyle = color;
-        ctx.arc(this.x,this.y. rad,0,Math.Pi *2);
+        ctx.arc(this.x,this.y,rad,0,Math.PI * 2);
         ctx.fill(); 
     }
 }
