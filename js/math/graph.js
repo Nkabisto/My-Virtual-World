@@ -48,6 +48,11 @@ class Graph{
         this.points.splice(this.points.indexOf(point),1);
     }
 
+    dispose(){
+        this.points.length = 0;
+        this.segments.length = 0;
+    }
+
     getSegmentsWithPoint(point){
         const segs = [];
         for(const seg of this.segments){
@@ -55,6 +60,7 @@ class Graph{
                 segs.push(seg);
             }
         }
+        return segs;
     }
 
     draw(ctx){

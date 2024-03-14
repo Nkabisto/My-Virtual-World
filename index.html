@@ -12,12 +12,17 @@
                 <button onclick="addRandomSegment()">Add Segment</button>
                 <button onclick="removeRandomSegment()">Remove Segment</button>
                 <button onclick="removeRandomPoint()">Remove Point</button>
+                <button onclick="clearDisplay()">Clear Display</button>
             </div>
 
             <script src="js/math/graph.js"></script>
             <script src="js/primitives/point.js"></script>
             <script src="js/primitives/segment.js"></script>
             <script>
+                function clearDisplay(){
+                    graph.dispose();
+                    refreshCanvas();
+                }
                 function removeRandomPoint(){
                     if(graph.points.length == 0){
                         console.log("No points");
